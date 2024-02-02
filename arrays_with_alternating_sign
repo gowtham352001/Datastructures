@@ -1,0 +1,13 @@
+def new_array(arr):
+    new_arr = [0] * len(arr)
+    odd = 0
+    even = 1
+    for i in range(len(arr)):
+        if arr[i] > 0:
+            new_arr[odd]=arr[i]
+            odd = odd+2
+        if arr[i] < 0:
+            new_arr[even]=arr[i]
+            even = even+2
+    return new_arr
+print(new_array([1,2,-2,-1]))
